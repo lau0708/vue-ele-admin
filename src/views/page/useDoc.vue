@@ -1,10 +1,12 @@
 <template>
-  $END$
+  <div>
+    使用文档
+  </div>
 </template>
 
 <script>
   export default {
-    name: "404.vue"
+    name: "useDoc"
   }
 </script>
 

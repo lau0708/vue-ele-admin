@@ -1,6 +1,7 @@
 <template>
   <div class="index">
     <sidebar></sidebar>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -15,5 +16,6 @@
 <style scoped lang="scss">
 .index{
   height: 100%;
+  display: flex;
 }
 </style>

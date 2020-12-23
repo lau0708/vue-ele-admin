@@ -29,45 +29,53 @@ const sidebarList = [
   {
     path: "/home_page",
     icon:"el-icon-location",
-    name: "首页",
+    component:"homePage",
     level:1
   },
   {
     path:"/components",
     icon:"el-icon-menu",
-    name:"组件",
-    level:1
-  },
-  {
-    path:"/document",
-    icon:"el-icon-document",
-    name:"使用文档",
+    component:"modules",
     level:1
   },
   {
     path:"/setting",
     icon:"el-icon-setting",
-    name:"配置",
+    component:"setting",
     level:1
   },
   {
-    path: "/error",
+    path: "",
     icon:"el-icon-document-delete",
-    name:"错误页",
-    level:1
+    component:"errorPage",
+    level:1,
+    children:[
+      {
+        path:"/404",
+        name: "404",
+        component:"404",
+        level:2
+      }
+    ]
   },
   {
     path:"",
     icon:"el-icon-s-grid",
-    name:"一级菜单",
+    component:"parentMenu",
     level:1,
     children:[
       {
         path:"/son_menu",
-        name:"子级菜单",
+        component:"sonMenu",
         level:2
       }
     ]
+  },
+  {
+    path:"/document",
+    icon:"el-icon-document",
+    component:"useDoc",
+    level:1
   }
 ]
 export default sidebarList

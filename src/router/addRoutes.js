@@ -1,6 +1,5 @@
 import Router from "./index"
 import store from "@/store/index"
-import NonePage from  "../views/404"
 
 function lazyLoading(name){
   return  () => import(`@/views/page/${name}.vue`)
@@ -41,10 +40,4 @@ export default (sidebarList = store.state.sidebarList)=>{
 
   //动态添加路由
   Router.addRoutes(route);
-  Router.addRoutes( [{
-    path: '*',
-    name: '404',
-    component:NonePage
-  }])
-
 }

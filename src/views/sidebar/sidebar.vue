@@ -38,18 +38,15 @@
 </template>
 
 <script>
-  import sidebarList from "../../tools/sidebar";
-  import addRoutes from "../../router/addRoutes";
+
   export default {
     name: "sidebar",
     data(){
       return {
-        sidebarList:[]
+        sidebarList:this.$store.state.sidebarList
       }
     },
     mounted() {
-      addRoutes(sidebarList);
-      this.sidebarList = this.$store.state.sidebarList;
     }
   }
 </script>
