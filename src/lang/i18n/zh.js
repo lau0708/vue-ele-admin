@@ -3,6 +3,13 @@
 import elementUI_ZH from "element-ui/lib/locale/lang/zh-CN"
 
 const zh = {
+  form:{
+    label:{
+      userName: "用户名",
+      pwd: "密码"
+    }
+  },
+
   menu:{
     homePage: "首页",
     modules: "组件",

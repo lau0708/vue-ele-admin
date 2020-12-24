@@ -13,6 +13,6 @@
 <style scoped lang="scss">
 .content-header{
   height: 50px;
-  background-color: #ebeef5;
+  border-bottom: 1px solid gainsboro;
 }
 </style>

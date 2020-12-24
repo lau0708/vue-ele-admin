@@ -55,7 +55,7 @@
   .sidebar{
     width: 200px;
     height: 100%;
-    background-color: #545c64;
+    background-color: #282c34;
     .theme{
       font-size: 20px;
       color: white;
