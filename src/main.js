@@ -13,7 +13,9 @@ import i18n from "./lang"
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 //引入mockjs
-require('./mock/api.js');
+import "./mock/api.js"
+
+import "./components/register"
 
 
 

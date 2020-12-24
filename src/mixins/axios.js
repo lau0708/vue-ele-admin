@@ -25,7 +25,7 @@ export default {
           params:params
         }).then((res)=>{
           //对后台返回状态值(码)进行二次封装（实际项目不同，返回的值不同）
-          if(res.data.status===0){
+          if(res.data.code===0){
             resolve(res.data);
           }else{
             //错误状态 后端给一个错误msg信息   针对不同错误执行不同操作
@@ -43,7 +43,7 @@ export default {
     req_post(url, params={}){
       return new Promise((resolve, reject) => {
         axios.post(url, params).then((res)=>{
-          if(res.data.status === 0){
+          if(res.data.code === 0){
             resolve(res.data)
           }else{
             console.log(res.data.msg)
@@ -58,7 +58,7 @@ export default {
     req_put(url, params={}){
       return new Promise((resolve, reject) => {
         axios.put(url, params).then((res)=>{
-          if(res.data.status === 0){
+          if(res.data.code === 0){
             resolve(res.data)
           }else{
             console.log(res.data.msg)
@@ -73,7 +73,7 @@ export default {
     req_delete(url,params={}){
       return new Promise((resolve, reject) =>{
         axios.delete(url, {data:params}).then((res)=>{
-          if(res.data.status === 0){
+          if(res.data.code === 0){
             resolve(res.data)
           }else{
             console.log(res.data.msg)
