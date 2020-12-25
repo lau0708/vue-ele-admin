@@ -1,11 +1,11 @@
 <template>
   <div class="login-container">
     <div class="login-form">
-      <e-form :form="form">
+      <e-form :form="formData">
         <div class="title">hello !</div>
         <div class="title-tips">欢迎来到{{ title }}！</div>
-        <e-input-name label="userName" v-model="form.username" prop="username"></e-input-name>
-        <e-input-pwd label="pwd" v-model="form.password" prop="password" @keyup.enter.native="handleLogin"></e-input-pwd>
+        <e-input-name label="userName" v-model="formData.username" prop="username"></e-input-name>
+        <e-input-pwd label="pwd" v-model="formData.password" prop="password" @keyup.enter.native="handleLogin"></e-input-pwd>
         <e-btn
           :loading="loading"
           name="登录"
@@ -21,38 +21,34 @@
 </template>
 
 <script>
+  import index from "../../../mixins/index";
   export default {
     name: 'Login',
-    directives: {
-      focus: {
-        inserted(el) {
-          el.querySelector('input').focus()
-        },
-      },
-    },
+    mixins:[index],
     data() {
       return {
         title: "vue-ele-admin",
-        form: {
+        formData: {
           username: '',
           password: '',
         },
         loading: false,
-        passwordType: 'password',
       }
     },
     mounted() {
-      this.form.username = 'admin';
-      this.form.password = '123456'
+      this.formData.username = 'admin';
+      this.formData.password = '123456'
       // setTimeout(() => {
       //   this.handleLogin()
       // }, 3000)
     },
     methods: {
-      //todo 登录
+      //登录
       handleLogin() {
-
-
+        this.req_post("/login", this.formData).then((data)=>{
+          this.$router.push("/home_page")
+          this.msg_success("登录成功")
+        })
       },
     },
   }

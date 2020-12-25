@@ -1,6 +1,8 @@
 <template>
   <div>
+    首页
     <e-table :tableData = tableData :columns="columns" :total="total">
+
     </e-table>
   </div>
 </template>

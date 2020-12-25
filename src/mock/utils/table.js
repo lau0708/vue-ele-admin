@@ -1,8 +1,6 @@
 import Mock from "mockjs"
 let Random = Mock.Random;
 
-Mock.mock('@email')
-Mock.mock('@email()')
 
 function userList(){
   let list = [];

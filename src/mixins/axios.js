@@ -46,7 +46,7 @@ export default {
           if(res.data.code === 0){
             resolve(res.data)
           }else{
-            console.log(res.data.msg)
+            this.msg_error(res.data.msg)
           }
         }).catch((error)=>{
           reject(error)
