@@ -9,7 +9,13 @@ const zh = {
       pwd: "密码"
     }
   },
-
+  label:{
+    admin:"admin"
+  },
+  button:{
+    cancel: "取消",
+    confirm: "确定"
+  },
   menu:{
     homePage: "首页",
     modules: "组件",
@@ -18,6 +24,9 @@ const zh = {
     errorPage: "错误页",
     parentMenu: "父级菜单",
     sonMenu: "子级菜单"
+  },
+  title:{
+    tip: "提示"
   },
   ...elementUI_ZH
 

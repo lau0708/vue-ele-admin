@@ -6,7 +6,8 @@ function login(config){
   let user = {
     username:"admin",
     password: "123456",
-    token: "weqrtweteter1424qwe"
+    token: "weqrtweteter1424qwe",
+    img: "https://i.gtimg.cn/club/item/face/img/8/15918_100.gif"
   }
   if(data.username === user.username && data.password === user.password){
     return Mock.mock({
@@ -22,5 +23,12 @@ function login(config){
   }
 }
 
-export {login}
+function logout(){
+  return Mock.mock({
+    code: 0,
+    msg: "success"
+  })
+}
+
+export {login, logout}
 

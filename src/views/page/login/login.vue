@@ -47,6 +47,7 @@
       handleLogin() {
         this.req_post("/login", this.formData).then((data)=>{
           this.$router.push("/home_page")
+          this.$store.commit("RefreshAccountInfo", data.result)
           this.msg_success("登录成功")
         })
       },

@@ -1,3 +1,4 @@
 export default {
-  sidebarList:[]
+  sidebarList:[],
+  accountInfo:{}
 }

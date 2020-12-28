@@ -13,6 +13,10 @@ import eInputPwd from "@/components/form/e-input-pwd"
 
 
 import eCard from "@/components/e-card"
+import eBreadcrumb from "@/components/e-breadcrumb"
+import eRefresh from "@/components/e-refresh"
+import eDropdown from "@/components/e-dropdown"
+import eDialogCenter from "@/components/e-dialog-center"
 
 let componentArr = [
   {name: "eTable",tem: eTable},
@@ -21,6 +25,10 @@ let componentArr = [
   {name: "eForm",tem: eForm},
   {name: "eInputPwd",tem: eInputPwd},
   {name: "eCard",tem: eCard},
+  {name: "eBreadcrumb",tem: eBreadcrumb},
+  {name: "eRefresh",tem: eRefresh},
+  {name: "eDropdown",tem: eDropdown},
+  {name: "eDialogCenter",tem: eDialogCenter},
 ]
 
 
