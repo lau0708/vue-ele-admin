@@ -63,5 +63,8 @@
       line-height: 100px;
       text-align: center;
     }
+    .el-menu-vertical-demo{
+      border-right: none;
+    }
   }
 </style>
