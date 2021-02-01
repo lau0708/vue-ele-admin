@@ -17,6 +17,7 @@ import eBreadcrumb from "@/components/e-breadcrumb"
 import eRefresh from "@/components/e-refresh"
 import eDropdown from "@/components/e-dropdown"
 import eDialogCenter from "@/components/e-dialog-center"
+import eTag from "@/components/e-tag"
 
 let componentArr = [
   {name: "eTable",tem: eTable},
@@ -29,6 +30,7 @@ let componentArr = [
   {name: "eRefresh",tem: eRefresh},
   {name: "eDropdown",tem: eDropdown},
   {name: "eDialogCenter",tem: eDialogCenter},
+  {name: "eTag",tem: eTag},
 ]
 
 

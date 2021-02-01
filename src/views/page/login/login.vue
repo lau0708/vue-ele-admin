@@ -22,6 +22,8 @@
 
 <script>
   import index from "../../../mixins/index";
+  import addRoutes from "../../../router/addRoutes";
+  import Sidebar from "../../../tools/sidebar"
   export default {
     name: 'Login',
     mixins:[index],
@@ -46,8 +48,9 @@
       //登录
       handleLogin() {
         this.req_post("/login", this.formData).then((data)=>{
-          this.$router.push("/home_page")
-          this.$store.commit("RefreshAccountInfo", data.result)
+          addRoutes(Sidebar);
+          this.$router.push("/home_page");
+          this.$store.commit("RefreshAccountInfo", data.result);
           this.msg_success("登录成功")
         })
       },

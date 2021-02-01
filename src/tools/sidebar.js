@@ -30,7 +30,8 @@ const sidebarList = [
     path: "/home_page",
     icon:"el-icon-location",
     component:"homePage",
-    level:1
+    level:1,
+    meta: { title: '首页' }
   },
   {
     path:"/components",

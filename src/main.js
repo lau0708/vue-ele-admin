@@ -11,7 +11,7 @@ import store from "./store"
 import i18n from "./lang"
 //引入ElementUi
 import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
+import '../static/css/variables.scss';
 //引入mockjs
 import "./mock/api.js"
 

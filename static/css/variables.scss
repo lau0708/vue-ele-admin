@@ -1,0 +1,19 @@
+/**
+ * @description 全局主题变量配置
+ */
+/* stylelint-disable */
+
+/* 改变主题色变量 */
+$--color-primary: teal;
+
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import "~element-ui/packages/theme-chalk/src/index";
+
+:root {
+  --primary-color: hsl(200, 100%, 48%); //主色调，例如我发送的消息的蓝色背景。
+  --inverse-color: hsl(310, 90%, 60%);  //反色调，或强调色调，与主色调形成鲜明对比，例如发送按钮的背景色。
+  --shadow-large: 0 0px 24px hsl(0, 0%, 0%, 0.2); //大阴影，例如标题栏、底部栏的阴影。
+  --shadow-medium: 0 0 12px hsl(0, 0%, 0%, 0.1);  //小阴影，例如输入框和表情选择弹出层。
+}

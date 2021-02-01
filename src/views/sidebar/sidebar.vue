@@ -1,7 +1,7 @@
 <template>
   <div class="sidebar">
     <div class="theme">
-      Project
+      JACKSON
     </div>
     <el-menu
       default-active="2"
