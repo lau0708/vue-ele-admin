@@ -31,7 +31,7 @@
       //按钮文字
       name:{
         type:String,
-        default:"新建"
+        default:""
       },
       //是否为朴素按钮
       plain:{

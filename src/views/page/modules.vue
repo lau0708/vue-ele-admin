@@ -13,7 +13,8 @@
       return {
         tags:[
           {
-            name: "聊天室"
+            name: "聊天室",
+            path: "/chat_room"
           }
         ]
       }

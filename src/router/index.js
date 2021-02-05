@@ -18,6 +18,10 @@ const router =  new Router({
       redirect: "/home_page",
       children:[]
     },
+    {
+      path: '/chat_room',
+      component: () => import(`@/views/page/chatRoom`)
+    }
     // {
     //   path: '*',
     //   name: '404',

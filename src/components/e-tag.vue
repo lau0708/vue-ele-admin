@@ -4,6 +4,7 @@
       v-for="tag in tags"
       :key="tag.name"
       closable
+      @click="jumpTagPage(tag)"
       :type="tag.type">
       {{tag.name}}
     </el-tag>
@@ -15,8 +16,9 @@
   /**
    * tags:[
    *  {
-   *    name:"标签名字", //标签名字
-   *    type:"success", //标签类型
+   *    name: "标签名字", //标签名字
+   *    type: "success", //标签类型
+   *    path: "/index"   //跳转路由
    *  }
    * ]
    * **/
@@ -28,6 +30,11 @@
         default: () => {
           return []
         }
+      }
+    },
+    methods:{
+      jumpTagPage(item){
+        this.$router.push(item.path)
       }
     }
   }

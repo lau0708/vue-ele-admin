@@ -1,17 +1,28 @@
 <template>
-  <el-form-item :label="getLabel(label)" :prop="prop" :rules="rule"  :size="size">
 
+  <el-form-item v-if="label" :label="getLabel(label)" :prop="prop" :rules="rule" :size="size">
     <el-input
       v-bind="$attrs"
       v-on="$listeners"
       v-model="value"
       :disabled="disabled"
       :style="{'width':width + ' !important'}"
-      :placeholder="placeholder?placeholder:'请输入'+getLabel(label)"
-    ></el-input>
+      :placeholder="placeholder?placeholder:'请输入'+getLabel(label)"></el-input>
     <slot></slot>
-
   </el-form-item>
+
+  <el-input
+    v-else
+    v-bind="$attrs"
+    v-on="$listeners"
+    v-model="value"
+    :disabled="disabled"
+    :style="{'width':width + ' !important'}"
+    :placeholder="placeholder?placeholder:'请输入'+getLabel(label)"
+  ></el-input>
+
+
+
 </template>
 
 <script>
@@ -40,7 +51,7 @@
       value:'',
       label:{
         type:String,
-        default:"名称"
+        default:""
       },
       require:{
         type:Boolean,
